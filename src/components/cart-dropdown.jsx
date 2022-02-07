@@ -30,5 +30,8 @@ const mapStatetoProps=(state)=>({
   
 })
 
-export default withRouter(connect(mapStatetoProps)(CartDropdown));//whenecer mapDispatchToProps
+export default withRouter(connect(mapStatetoProps)(CartDropdown));//1.whenecer mapDispatchToProps
 //not used thne dipatch can be directly used here dipacth used for passing actions look at props
+
+//2.also if hoc used then first evaluated from inside like here component returned from connectis passed into
+//withRouter now it can pass rountin gobjects to this compoent..
