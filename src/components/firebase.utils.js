@@ -3,13 +3,12 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 const config = {
-    apiKey: "AIzaSyBVSbdWiJFzQJNfSZD8NQ8cV6Nexxp5QIo",
-    authDomain: "e-demo-8d9f1.firebaseapp.com",
-    projectId: "e-demo-8d9f1",
-    storageBucket: "e-demo-8d9f1.appspot.com",
-    messagingSenderId: "792330565023",
-    appId: "1:792330565023:web:6bdc3492ec533f6537f9aa",
-    measurementId: "G-74DTXX0ZYN"
+  apiKey: "AIzaSyBYebB7dJcmIXJXqi9N4aq2lu9P-fXWGHo",
+  authDomain: "ecom-groovy.firebaseapp.com",
+  projectId: "ecom-groovy",
+  storageBucket: "ecom-groovy.appspot.com",
+  messagingSenderId: "37738380370",
+  appId: "1:37738380370:web:a09475361ae416840a738b"
 };
 
 firebase.initializeApp(config);

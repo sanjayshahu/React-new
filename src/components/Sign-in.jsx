@@ -13,8 +13,7 @@ class SignIn extends React.Component {
 
     this.state = {
       email: '',
-      password: '',
-      count:0
+      password: ''
     };
   }
 
@@ -36,9 +35,7 @@ class SignIn extends React.Component {
 
     this.setState({ [name]: value });
   };
-  increCounter=()=>{
-    this.setState(prevState=>({...prevState,count:prevState.count+1}));
-  }
+
 
   render() {
     return (
@@ -64,10 +61,9 @@ class SignIn extends React.Component {
             required
           />
           <div className='buttons'>
-          <CustomButton id='counter' onClick={this.increCounter}> Increment {this.state.count} </CustomButton>
             <CustomButton type='submit'> Sign in </CustomButton>
             <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
-              Sign in with Google 
+              Google 
             </CustomButton>
           </div>
         </form>
