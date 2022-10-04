@@ -15,10 +15,10 @@ firebase.initializeApp(config);
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;//from firebase
+//only for pushing into users collection
+  const userRef = firestore.doc(`users/${userAuth.uid}`);//doc reference is used fix this issue uid is unique identifier  for user
 
-  const userRef = firestore.doc(`users/${userAuth.uid}`);//doc reference is used fix this issue
-
-  const snapShot = await userRef.get();//snapshot for actual data
+  const snapShot = await userRef.get();//snapshot for actual data a
 
   if (!snapShot.exists) {//if user doesnot exist create new and add it to users collection
     const { displayName, email } = userAuth;
@@ -43,6 +43,6 @@ export const firestore = firebase.firestore();
 
 const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({ prompt: 'select_account' });
-export const signInWithGoogle = () => auth.signInWithPopup(provider);
+export const signInWithGoogle = () => auth.signInWithPopup(provider);//here only provider used is google with signwith popup
 
 export default firebase;

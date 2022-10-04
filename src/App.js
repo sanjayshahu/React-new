@@ -44,7 +44,9 @@ const Hats=(props)=>{
   componentDidMount() {
     const { setCurrentUser } = this.props;
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {//subscription from firebase is added so that continous data is obtained..
+      console.log("user",userAuth);//only from authetication..no db inbovd
       if (userAuth) {
+        //from here its for users collectiok
         const userRef = await createUserProfileDocument(userAuth);
 
         userRef.onSnapshot(snapShot => {//..on obtainining the existing or newly created snapshot
