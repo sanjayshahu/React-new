@@ -9,6 +9,7 @@ import { auth,createUserProfileDocument } from './components/firebase.utils';
 import { connect } from "react-redux";
 import { setCurrentUser } from "../src/redux/user/user.actions";
 import CheckoutPage  from "./pages/checkoutpage";
+import UserDetails from "./pages/userdetails/userdetails";
 
 // import { Redirect } from "react-router-dom";
 const Hats=(props)=>{
@@ -80,6 +81,7 @@ const Hats=(props)=>{
       <Route path='/hats' component={Hats}/>
       <Route path='/checkout' component={CheckoutPage}/>
       <Route path='/shop' component={ShopPage}/>
+      <Route  path='/user' component={UserDetails}/>
       <Route exact path='/signinnup' render={()=>this.props.currentUser?<Redirect to="/"></Redirect>:<SignInAndSignUpPage></SignInAndSignUpPage>}/>
       {/* //render used becuase it caccepts javascript */}
       {/* <Route exact path='/a/b/hats' component={Hats}/>
